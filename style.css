@@ -1,0 +1,150 @@
+*{
+    font-family: 'Victor mono';
+    
+}
+
+body {
+    display:grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto auto auto;
+    font-size: 100%;
+    background-color: rgb(187, 69, 69);
+
+}
+
+.title { 
+    color:black;
+    margin:1rem 0 0 0;
+    text-align: center;
+}
+
+.gridContainer {
+    align-items:center;
+    display:flex;
+    justify-content: center;
+    margin: 2rem 0; 
+} 
+
+.mainGrid {
+    background-color: rgb(80, 78, 78);
+    box-sizing: content-box;
+    display:inline-grid;
+    gap:1px;
+    height: 90vw;
+    outline:1rem solid rgba(0, 0, 0,.5);
+    width:90vw;
+}
+
+.gridOptions {
+    display:grid;
+    grid-template-areas: 'input  input'
+                         'mainO  tools';
+    background-color: rgba(0, 0, 0,.5);
+    padding:5px;
+    margin:0 5px;
+}
+.mainOptions {
+    display:flex;
+    flex-direction: column;
+    grid-area: mainO;
+    margin:auto;
+    width:45vw;
+}
+.mainOptions > button, .gridTools > button{
+    background-color: rgb(190, 62, 62);
+    border:1px solid black;
+    color:white;
+    font-size: 1.2rem;
+    margin-top: 5px;
+    outline:none;
+    width:-webkit-fill-available;
+}
+.inputContainer {
+    background-color: rgba(0, 0, 0,.5);
+    border:1px solid red;
+    border-radius: 1rem;
+    color:white;
+    display:flex;
+    grid-area: input;
+    flex-flow: column;
+}
+.gridTools {
+    grid-area: tools;
+    display:flex;
+    flex-direction: column;
+    width:45vw;
+}
+.gridNumber{order:1;}
+.cleanGrid{order:2;}
+.toogleGrid{order:3;}
+
+.pixelCount {
+    text-align: center;
+}
+.rangeTitle {
+    text-align: center;
+    padding:5px;
+}
+
+.divBorder {
+    gap: 0 !important;
+}
+
+input#gridSquares {
+    outline:none !important;
+}
+
+@media screen and ( min-width: 1030px ) {
+    .mainGrid {
+        height: 525px;
+        width:525px;      
+    }
+   
+    .title{grid-area: title; }
+    .gridContainer{grid-area: container;}
+
+    body {
+        display:grid;
+        grid-template-areas: '. title .'
+                             'gridTools container .'
+                             'gridTools container .';
+        overflow: hidden;
+    }
+
+    button:hover,input:hover {
+        background-color: rgba(0, 0, 0,1);
+        cursor:pointer;
+    }
+
+    .gridOptions {
+        border-radius: 1rem;
+        box-sizing: border-box;
+        display:flex;
+        flex-flow: column;
+        grid-area: gridTools; 
+        justify-content: space-evenly;
+        justify-self: center;
+        margin-right: 10px;
+        padding: 10px;
+        width:200px;
+        height:90vh;
+    }
+
+    .mainOptions {
+        margin:auto 0;
+        width:-webkit-fill-available;
+    }
+    
+    .inputContainer {
+        align-items: center;
+        margin:auto 0;
+    }
+
+    .gridNumber {
+        display:none;
+    }
+    .gridTools{
+        margin:auto 0;
+        width:-webkit-fill-available;
+    }
+}

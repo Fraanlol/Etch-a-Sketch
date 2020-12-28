@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="normalize.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="modernizr-custom.js"></script>
+    <title>Pixel Art</title>
+</head>
+<body>
+    
+    <h1 class="title">
+        Etch-a-Sketch
+    </h1>
+
+    <main class="gridContainer">
+
+        <div class="mainGrid">
+        </div>
+
+    </main>
+
+    <footer class="gridOptions">
+
+        <div class="mainOptions">
+            <button class="blackColor color">Black</button>
+            <button class="greyColor color">greyScale</button>
+            <button class="rainbowColor color">Rainbow</button>
+            <button class="eraser color">Eraser</button>
+            <button class="pickColor color">Picker</button>
+           
+        </div>
+        
+        <label for="gridSquares" class="inputContainer">
+
+            <span class="rangeTitle">Grid's Number:</span>
+            <input type="range" name="gridSquares" id="gridSquares" max='100' min='10' value='10' onmousemove='updateGridNumber()'>
+            <span class="pixelCount"> " "</span>
+
+        </label>
+        <div class="gridTools">
+            <button class="cleanGrid">Clear</button>
+            <button class="gridNumber">Create</button>
+            <button class="toogleGrid">Toogle Grid</button>
+
+        </div>
+        
+    </footer>
+    
+    <script src="code.js"></script>
+</body>
+</html>
