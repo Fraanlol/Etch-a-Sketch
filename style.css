@@ -65,8 +65,9 @@ body {
     border-radius: 1rem;
     color:white;
     display:flex;
-    grid-area: input;
     flex-flow: column;
+    grid-area: input;
+    
 }
 .gridTools {
     grid-area: tools;
