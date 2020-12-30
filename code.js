@@ -7,6 +7,9 @@ let clearButton = document.querySelector('.cleanGrid');
 clearButton.addEventListener('click', eraser);
 let gridToogle = document.querySelector('.toogleGrid');
 gridToogle.addEventListener('click', toogleGridLines);
+colorPalette = document.querySelector('.colorChoice');
+colorPalette.addEventListener('mouseout', (e) => { return color = e.target.value; });
+
 let color;
 let drawing = false;
 
@@ -46,7 +49,6 @@ optionButtons.forEach((everyButton) => { //This forEach adds a Click event to th
          everyButton.classList.contains('greyColor') ? color = 'grey' : false ;
          everyButton.classList.contains('rainbowColor') ? color = 'rainbow' : false ;
          everyButton.classList.contains('eraser') ? color = 'white' : false ;
-         everyButton.classList.contains('pickColor') ? true : false;
     })
 })
 
