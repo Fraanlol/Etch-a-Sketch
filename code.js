@@ -51,7 +51,6 @@ optionButtons.forEach((everyButton) => { //This forEach adds a Click event to th
     })
 })
 
-
 const colorPicker = (e) => { //Using the variable from the forEach, this function does a forEach on every gridPixel, and adds the event mouseOver to allow draw, and sets the correct color to draw.
     let everyDiv = document.querySelectorAll('.pixel');
     everyDiv.forEach((key) => {
@@ -76,7 +75,6 @@ const colorPicker = (e) => { //Using the variable from the forEach, this functio
         });
     })
 }
-
 
 const colorDragger = () => { 
     let everyDiv = document.querySelectorAll('.pixel');
@@ -106,7 +104,6 @@ const colorDragger = () => {
     })
 }
 
-
 function rainbow() { //This function returns a randomColor to make a RainbowEffect, i did it a Function because i need to call it whenever i mouseOver every div
     return `hsl(${Math.round(Math.random() * 360)},100%,50%)`
 }
@@ -122,7 +119,6 @@ function toogleGridLines() {
     let borders = document.querySelector('.mainGrid');
     borders.classList.toggle('divBorder')
 }
-
 createGridDivs(colNumber);
 colorPicker();
 colorDragger();
