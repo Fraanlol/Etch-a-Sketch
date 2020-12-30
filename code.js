@@ -107,8 +107,9 @@ const colorDragger = () => {
 }
 
 
+
 function rainbow() { //This function returns a randomColor to make a RainbowEffect, i did it a Function because i need to call it whenever i mouseOver every div
-    return `rgb(${Math.round(Math.random() * 255)},${Math.round(Math.random() * 255)},${Math.round(Math.random() * 255)})`
+    return `hsl(${Math.round(Math.random() * 360)},100%,50%)`
 }
 
 function eraser() { //This is a 'Reset' button, i need to call the colorPicker function again because im removing every div
