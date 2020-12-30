@@ -39,14 +39,14 @@ const newGrid = () => { //Function to create a new grid
 createGridRange.addEventListener('mouseup', newGrid);  // Create a grid, using the Range input, available on Desktop
 createGridRange.addEventListener('click', newGrid);  // Create a grid, using the button Create, because Range Input event is not available on Mobile
 
-optionButtons.forEach((i) => { //This forEach adds a Click event to the OptionButtons and catch which one was clicked to assign it to a variable
+optionButtons.forEach((everyButton) => { //This forEach adds a Click event to the OptionButtons and catch which one was clicked to assign it to a variable
     color='black';//Here i am setting a default value to color, to use it when the page loads without needing to click o Black button
-    i.addEventListener('click', () => {
-         i.classList.contains('blackColor') ? color = 'black' : false ;
-         i.classList.contains('greyColor') ? color = 'grey' : false ;
-         i.classList.contains('rainbowColor') ? color = 'rainbow' : false ;
-         i.classList.contains('eraser') ? color = 'white' : false ;
-         i.classList.contains('pickColor') ? true : false;
+    everyButton.addEventListener('click', () => {
+         everyButton.classList.contains('blackColor') ? color = 'black' : false ;
+         everyButton.classList.contains('greyColor') ? color = 'grey' : false ;
+         everyButton.classList.contains('rainbowColor') ? color = 'rainbow' : false ;
+         everyButton.classList.contains('eraser') ? color = 'white' : false ;
+         everyButton.classList.contains('pickColor') ? true : false;
     })
 })
 
