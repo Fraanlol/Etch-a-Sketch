@@ -1,6 +1,5 @@
 const drawingSpace = document.querySelector('.mainGrid');
 let createGridRange = document.querySelector('#gridSquares');
-let createGridButton = document.querySelector('.gridNumber');
 let colNumber = parseInt(document.querySelector('#gridSquares').value);
 let optionButtons = document.querySelectorAll('.color');
 let clearButton = document.querySelector('.cleanGrid');
@@ -39,8 +38,8 @@ const newGrid = () => { //Function to create a new grid
     colorDragger();
 }
 
-createGridRange.addEventListener('mouseup', newGrid);  // Create a grid, using the Range input, available on Desktop
-createGridRange.addEventListener('click', newGrid);  // Create a grid, using the button Create, because Range Input event is not available on Mobile
+createGridRange.addEventListener('mouseup', newGrid);  // Create a grid, using the Range input, available on Desktop.
+createGridRange.addEventListener('touchend', newGrid);  // Create a grid, on mobile.
 
 optionButtons.forEach((everyButton) => { //This forEach adds a Click event to the OptionButtons and catch which one was clicked to assign it to a variable
     color='black';//Here i am setting a default value to color, to use it when the page loads without needing to click o Black button
@@ -78,6 +77,7 @@ const colorPicker = (e) => { //Using the variable from the forEach, this functio
     })
 }
 
+
 const colorDragger = () => { 
     let everyDiv = document.querySelectorAll('.pixel');
     everyDiv.forEach((key) => {
@@ -105,7 +105,6 @@ const colorDragger = () => {
         })
     })
 }
-
 
 
 function rainbow() { //This function returns a randomColor to make a RainbowEffect, i did it a Function because i need to call it whenever i mouseOver every div

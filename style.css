@@ -142,10 +142,6 @@ input#gridSquares {
         align-items: center;
         margin:auto 0;
     }
-
-    .gridNumber {
-        display:none;
-    }
     .gridTools{
         margin:auto 0;
         width:-webkit-fill-available;
