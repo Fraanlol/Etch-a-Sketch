@@ -58,6 +58,7 @@ body {
     margin-top: 5px;
     outline:none;
     width:-webkit-fill-available;
+    width:-moz-available;
 }
 .colorChoice{
     outline:none;
@@ -95,6 +96,7 @@ body {
 
 input#gridSquares {
     outline:none !important;
+    width:-moz-available
 }
 
 @media screen and ( min-width: 1030px ) {
@@ -136,6 +138,7 @@ input#gridSquares {
     .mainOptions {
         margin:auto 0;
         width:-webkit-fill-available;
+        width:-moz-available;
     }
     .inputContainer {
         align-items: center;
@@ -144,5 +147,6 @@ input#gridSquares {
     .gridTools{
         margin:auto 0;
         width:-webkit-fill-available;
+        width:-moz-available;
     }
 }
